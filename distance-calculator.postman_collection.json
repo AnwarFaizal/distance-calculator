@@ -1,0 +1,86 @@
+{
+	"info": {
+		"_postman_id": "9a19a59c-9373-4726-836a-8b0592c3c491",
+		"name": "distance-calculator",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2908228"
+	},
+	"item": [
+		{
+			"name": "About",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/distance/about",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"distance",
+						"about"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sum all distances",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"distanceList\": [\r\n        {\r\n            \"length\": 5.5,\r\n            \"unit\": \"Meters\"\r\n        },\r\n        {\r\n            \"length\": 7.7,\r\n            \"unit\": \"Yards\"\r\n        }\r\n    ],\r\n    \"unit\": \"Meters\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/distance",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"distance"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sum all distances with feet",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"distanceList\": [\r\n        {\r\n            \"length\": 5.5,\r\n            \"unit\": \"Meters\"\r\n        },\r\n        {\r\n            \"length\": 7.7,\r\n            \"unit\": \"Feet\"\r\n        }\r\n    ],\r\n    \"unit\": \"Feet\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/distance",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"distance"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

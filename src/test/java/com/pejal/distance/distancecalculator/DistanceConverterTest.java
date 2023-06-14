@@ -65,5 +65,31 @@ public class DistanceConverterTest {
         double result = instance.yardToMeters(yard);
         assertThat(result).isEqualTo(expResult);
     }
+
+    /**
+     * Test of toMeters method, of class DistanceConverter.
+     */
+    @Test
+    public void testToMeters() {
+        log.info("toMeters");
+        double distance = 7.7;
+        Measurement unit = Measurement.YARD;
+        double expResult = 7.040901235358127;
+        double result = DistanceConverter.toMeters(distance, unit);
+        assertThat(result).isEqualTo(expResult);
+    }
+
+    /**
+     * Test of metersToUnit method, of class DistanceConverter.
+     */
+    @Test
+    public void testMetersToUnit() {
+        log.info("metersToUnit");
+        double distance = 5.5;
+        Measurement unit = Measurement.FOOT;
+        double expResult = 18.04462;
+        double result = DistanceConverter.metersToUnit(distance, unit);
+        assertThat(result).isEqualTo(expResult);
+    }
     
 }

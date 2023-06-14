@@ -9,7 +9,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- *
+ * Distance value with measurement unit
  * @author pejalhebat
  */
 @Data

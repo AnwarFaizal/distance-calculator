@@ -11,7 +11,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- *
+ * Request payload format for summing values.
  * @author pejalhebat
  */
 

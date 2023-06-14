@@ -8,12 +8,15 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- *
+ * Measurement units available for conversion.
+ * To extend, add another distance measurement unit, together with
+ * its length equivalent to 1 meter. 
  * @author pejalhebat
  */
 public enum Measurement {
     METER("Meters",1.0),
-    YARD("Yards",1.09361);
+    YARD("Yards",1.09361),
+    FOOT("Feet", 3.28084);
     
     public final String label;
     public final double conversion;
