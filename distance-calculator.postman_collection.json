@@ -27,6 +27,26 @@
 			"response": []
 		},
 		{
+			"name": "Measurement units",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/distance/units",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"distance",
+						"units"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "Sum all distances",
 			"request": {
 				"method": "POST",
