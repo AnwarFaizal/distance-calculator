@@ -7,7 +7,7 @@ package com.pejal.distance.distancecalculator;
 import lombok.extern.slf4j.Slf4j;
 
 /**
- *
+ * Converts distances in any <code>Measurement</code> unit to meters and back.
  * @author pejalhebat
  */
 

@@ -22,6 +22,10 @@ public class DistanceCalculator {
         return new Distance(5.5, Measurement.METER.label);
     }
 
+    /**
+     * Just to retrieve a sample request payload.
+     * @return sample request payload
+     */
     public DistanceSumRequest getSampleSumRequest() {
         List<Distance> distanceList = new ArrayList<>();
         distanceList.add(getDefaultDistance());
@@ -33,13 +37,15 @@ public class DistanceCalculator {
                 
     }
     
-    public Distance summAllDistances(DistanceSumRequest sumRequest){
+    /**
+     * Collects all distances, convert to meters first before summing.
+     * Then converts back to required measurement unit before return
+     * @param sumRequest list of distances with their own measurement unit
+     * @return sum of distance converted to requested measurement unit
+     */
+    public Distance sumAllDistances(DistanceSumRequest sumRequest){
         Distance resultDistance = new Distance();
         resultDistance.setUnit(sumRequest.getUnit());
-//        BigDecimal sumDistance = new BigDecimal(0);
-//        for (Distance distance: sumRequest.getDistanceList()) {
-//            sumDistance.add(new BigDecimal(distance.))
-//        }
         double distanceInMeters = sumRequest
                 .getDistanceList()
                 .stream()

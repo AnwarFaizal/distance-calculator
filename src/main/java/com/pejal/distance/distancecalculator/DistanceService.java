@@ -25,9 +25,14 @@ public class DistanceService {
     @Autowired
     private DistanceCalculator calculator;
     
+    @GetMapping("/about")
+    public String getAbout(){
+        return "Distance calculator";
+    }
+    
     @PostMapping
     public Distance sumAllDistances(@RequestBody DistanceSumRequest request ) {
-        return calculator.summAllDistances(request);
+        return calculator.sumAllDistances(request);
     }
     
     @GetMapping("/sumrequest")
