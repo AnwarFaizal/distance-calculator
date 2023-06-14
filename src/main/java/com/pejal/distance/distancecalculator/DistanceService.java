@@ -30,6 +30,11 @@ public class DistanceService {
         return "Distance calculator";
     }
     
+    @GetMapping("/units")
+    public String getMeasurementUnits(){
+        return calculator.getMeasurementUnits();
+    }
+    
     @PostMapping
     public Distance sumAllDistances(@RequestBody DistanceSumRequest request ) {
         return calculator.sumAllDistances(request);

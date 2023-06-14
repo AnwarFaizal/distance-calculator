@@ -7,6 +7,8 @@ package com.pejal.distance.distancecalculator;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
@@ -64,5 +66,12 @@ public class DistanceCalculator {
         return DistanceConverter.toMeters(distance.getLength()
                 , Measurement.valueOfLabel(distance.getUnit()));
     }
-    
+
+    public String getMeasurementUnits() {
+        return Stream.of(Measurement.values())
+                .map(u -> u.label)
+                .collect(Collectors.toList())
+                .toString();
+    }
+
 }
